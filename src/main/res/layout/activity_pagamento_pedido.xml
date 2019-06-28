@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.3"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="left"
+        android:text="Forma de pagamento"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:gravity="left"
+            android:text="*Ao escolher forma de pagamento ele finalizará o pedido"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:gravity="left"
+            android:text="Caso venha escolher dinheiro o campo troco sera ativado"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- aqui ficara as formas de pagamento-->
+        <ListView
+            android:id="@+id/ListFormaPagamento"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6">
+
+        </ListView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="left"
+            android:text="Total Pedido"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/PagarTotalPedido"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.09"
+            android:gravity="left"
+            android:text="R$: 123,00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="Troco:"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/edtTroco"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="left"
+            android:hint="*Sem troco escreva 0"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            android:enabled="false"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFinalizarTroco"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Finalizar Pedido"
+            android:background="@android:color/holo_red_dark"
+            android:enabled="false"
+            android:textColor="#FFF"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
